@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.cdnfonts.com/css/medieval-scribish" rel="stylesheet">
+
+    <script type="text/javascript" src="code.js"></script>
+
+    <link rel="stylesheet" href="stilus.css">
+
+    <title>Beandandó</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="oszlop1">
+            <div id="panel">
+                <p>Nekeresdországban Nevenincs királynak egyik szeme sír, a másik nevet. Nevet, mert végre elkészült a hatalmas
+                    kacsalábon forgó palotája, sok-sok tágas szobával és folyosóval. Ugyanakkor sír is, mert ezeket a helyiségeket be
+                    kell világítani és melegen kell tartani, azonban az aktuális rezsiemelkedés őt is érinti. Itt az ideje tehát
+                    elgondolkodni, hogy pontosan hová is helyezzünk el villanykörtéket, hogy minden megfelelően be legyen világítva;
+                    ugyanakkor csak oda helyezzünk el izzót, ahol ténylegesen szükség is van rá.</p>
+                    <p>A játékot készítette: Csapó Hunor <i>-B8O0LS-</i></p>
+                    <div class="centered">
+                        
+                        <input type="button" class="gombi" value="Szünet" id="stopIt" disabled>
+                        <input type="button" class="gombi" value="Játék mentése" id="savename" disabled>
+                        <input type="button" class="gombi" value="Új játék" id="newGame">
+                    </div>
+                    <br>
+                    <input type="text" id="alert_message" class="alert_stilus" disabled>
+            </div>
+            <div id="panel">
+                <p>Legutóbbi játékok eredményei:</p>
+                <table id="nyertesPanel" class="masikpanel">
+                    <tr>
+                        <th>Játékos neve</th>
+                        <th>Pálya neve</th>
+                        <th>Teljesítési idő</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="oszlop2">
+            <div class="chooseOne" id="panel">
+                <div class="darker">
+                    <h1>Kérem válasszon pályát!</h1>
+                    <h2>Új játék:</h2>
+                    Kérem adja meg a nevét: <input type="text" id="name" placeholder="Játékos neve (min 3 betű)" min="3">
+                    <br><br>
+                    <input type="button" id="gomb" value="Könnyű pálya" class="konnyu" disabled>
+                    <input type="button" id="gomb" value="Közepes pálya" class="kozepes" disabled>
+                    <input type="button" id="gomb" value="Extrém pálya" class="nehez" disabled>
+                    <br>
+                    <h2>Mentett játékok:</h2>
+                    <table id="addPanel" class="masikpanel">
+                        <tr>
+                            <th>Játékos neve</th>
+                            <th>Pálya neve</th>
+                            <th>Betöltés</th>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="loadTable()"></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+            <div class="game">
+                <p>Eltelt idő: <span id="timer"></span> másodperc</p>
+                <p>Játékos: <span id="displayname"></span></p>
+                <div>
+                    <table id="tabla">
+
+                    </table>
+                    <p id="nyert"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
